@@ -10,4 +10,21 @@ main {
     width: 50%;
     margin: auto;
     border: 1px solid black;
+    /* background-color: gray; */
+}
+.classe-ecran{
+    /* border: solid red; */
+    text-align: end;
+}
+body{
+    background-color: yellow;
+}
+.classe-clavier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.classe-boutton {
+    margin: 2px;
 }
