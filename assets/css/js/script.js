@@ -73,8 +73,8 @@ for (let index = 1; index <= 10; index++) {
 }
 let decimal = document.createElement("button");
 decimal.style.border = "1px solid blue"
-decimal.style.height = "100px"
-decimal.style.width = "100px"
+decimal.style.height = "80px"
+decimal.style.width = "120px"
 decimal.classList.add("classe-boutton");
 decimal.innerText = ".";
 clavierChiffres.appendChild	(decimal);
@@ -82,5 +82,53 @@ clavierChiffres.appendChild	(decimal);
 // j'ai creer un element clavier signes sur le quel j'affect a clavier 
 let clavierSignes = document.createElement("div");
 clavierSignes.classList.add("classe-clavier-signes");
-
 clavier.appendChild(clavierSignes);
+
+// je creer des bouttons que j'ajoute au claviersignes
+// bouton moins -
+let signeMoins= document.createElement('div');
+
+// j'atribut une classe
+signeMoins.classList.add("classe-moins");
+// j'atribut le signe a mon boutton
+signeMoins.innerText= "-";
+signeMoins.style.height= "60px"
+signeMoins.style.width= "60px"
+signeMoins.style.border= "1px solid black"
+
+// le moins devien l'enfant de clavierSignes
+clavierSignes.appendChild(signeMoins);
+
+// boutton plus +
+let signePlus= document.createElement("div");
+signePlus.classList.add("classe-plus");
+signePlus.innerText="+";
+signePlus.style.height="60px";
+signePlus.style.width="60px";
+signePlus.style.border = "1px solid black";
+clavierSignes.appendChild(signePlus);
+
+// boutton division /
+let signeDivision= document.createElement("div");
+signeDivision.classList.add("classe-division");
+signeDivision.innerText= "÷";
+signeDivision.style.border= "1px solid black";
+clavierSignes.appendChild(signeDivision);
+
+// bouton multiplication
+let signeMulti= document.createElement("div");
+signeMulti.classList.add("classe-multi");
+clavierSignes.appendChild(signeMulti);
+
+// boutton egal =
+let signeEgal = document.createElement("div");
+signeEgal.classList.add("classe-egal");
+clavierSignes.appendChild(signeEgal);
+
+// boutton supression C
+let signeC = document.createElement("div");
+signeC.classList.add("classe-C");
+clavierSignes.appendChild(signeC);
+
+
+

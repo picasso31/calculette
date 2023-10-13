@@ -14,7 +14,8 @@ main {
 }
 .classe-ecran{
     /* border: solid red; */
-    text-align: end;
+    text-align:end
+   
 }
 body{
     background-color: yellow;
@@ -27,4 +28,12 @@ body{
 
 .classe-boutton {
     margin: 2px;
+    border-radius: .5rem;
+}
+.classe-moins , .classe-plus {
+    margin: 2px;
+    border-radius: .5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
