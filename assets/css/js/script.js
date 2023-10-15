@@ -12,7 +12,7 @@ console.log("script chargée !")
 let calc = document.createElement("main");      
 calc.style.height = "600px";
 calc.style.width = "400px";
-calc.style.border = "1px solid black";
+calc.style.border = "3px solid black";
 calc.style.backgroundColor = "white"
 
 // atribuer un enfant a mon element "document.body.appenchild"(le nom de ma boite creer ma variable)
@@ -29,7 +29,7 @@ ecran.classList.add("classe-ecran");
 
 // exemple.innerText = la valeur a mettre dans le texte//
 ecran.innerText= 0;
-ecran.style.backgroundColor= "gray"
+ecran.style.backgroundColor= "gray";
 
 // ensuite j'ai attribuer mon ecran a ma calculette //
 calc.appendChild(ecran);
@@ -45,23 +45,22 @@ calc.appendChild(clavier);
 
 
 
-// j'ai creer un element clavier chiffres sur le quel j'affect a clavier
+            // j'ai creer un element clavier chiffres sur le quel j'affect a clavier
 let clavierChiffres= document.createElement("div");
-clavierChiffres.classList.add("classe-clavier-chiffres");
-clavier.appendChild(clavierChiffres);
-// ensuite j'ai atribuer a mon clavier les boutton autan qu'enfant
-// j'ai creer une boucle avec l'element for ( let index = debut de la boucle ; index <= "inferieur ou egal a au nombre indiquer ; index++")
-// au lieu de creer 10 bouton et de touse les ecrire
+    clavierChiffres.classList.add("classe-clavier-chiffres");
+    clavier.appendChild(clavierChiffres);
+            // ensuite j'ai atribuer a mon clavier les boutton autan qu'enfant
+            // j'ai creer une boucle avec l'element for ( let index = debut de la boucle ; index <= "inferieur ou egal a au nombre indiquer ; index++")
+            // au lieu de creer 10 bouton et de touse les ecrire
 for (let index = 1; index <= 10; index++) {
-
-    // ensuite j'ai creer un boutton
+            // ensuite j'ai creer un boutton
     let boutton = document.createElement("button");
-        boutton.style.border = "1px solid blue"
-        boutton.style.height = "100px"
-        boutton.style.width = "100px"
+        boutton.style.border = "1px solid blue";
+        boutton.style.height = "100px";
+        boutton.style.width = "100px";
         
-    // jr lui est attribuer une classlist
-    boutton.classList.add("classe-boutton");
+            // jr lui est attribuer une classlist
+        boutton.classList.add("classe-boutton");
 
     //J'ai integer un text a l'interieur de mes boutton exemple.innerText= 0 "ou dans mon cas j'ai mis index qui etai egal de 1 a 10"
     if (index == 10) {
@@ -69,66 +68,82 @@ for (let index = 1; index <= 10; index++) {
     } else {
         boutton.innerText= index;
     }
-    clavierChiffres.appendChild(boutton);
+        clavierChiffres.appendChild(boutton);
 }
 let decimal = document.createElement("button");
-decimal.style.border = "1px solid blue"
-decimal.style.height = "80px"
-decimal.style.width = "120px"
-decimal.classList.add("classe-boutton");
-decimal.innerText = ".";
-clavierChiffres.appendChild	(decimal);
+    decimal.style.border = "1px solid blue";
+    decimal.style.height = "80px";
+    decimal.style.width = "120px";
+    decimal.classList.add("classe-boutton");
+    decimal.innerText = ".";
+    clavierChiffres.appendChild	(decimal);
+
+
+
+
 
 // j'ai creer un element clavier signes sur le quel j'affect a clavier 
 let clavierSignes = document.createElement("div");
-clavierSignes.classList.add("classe-clavier-signes");
-clavier.appendChild(clavierSignes);
-
-// je creer des bouttons que j'ajoute au claviersignes
-// bouton moins -
-let signeMoins= document.createElement('div');
-
-// j'atribut une classe
-signeMoins.classList.add("classe-moins");
-// j'atribut le signe a mon boutton
-signeMoins.innerText= "-";
-signeMoins.style.height= "60px"
-signeMoins.style.width= "60px"
-signeMoins.style.border= "1px solid black"
-
-// le moins devien l'enfant de clavierSignes
-clavierSignes.appendChild(signeMoins);
-
-// boutton plus +
-let signePlus= document.createElement("div");
-signePlus.classList.add("classe-plus");
-signePlus.innerText="+";
-signePlus.style.height="60px";
-signePlus.style.width="60px";
-signePlus.style.border = "1px solid black";
-clavierSignes.appendChild(signePlus);
-
-// boutton division /
-let signeDivision= document.createElement("div");
-signeDivision.classList.add("classe-division");
-signeDivision.innerText= "÷";
-signeDivision.style.border= "1px solid black";
-clavierSignes.appendChild(signeDivision);
-
-// bouton multiplication
-let signeMulti= document.createElement("div");
-signeMulti.classList.add("classe-multi");
-clavierSignes.appendChild(signeMulti);
-
-// boutton egal =
-let signeEgal = document.createElement("div");
-signeEgal.classList.add("classe-egal");
-clavierSignes.appendChild(signeEgal);
-
-// boutton supression C
+    clavierSignes.classList.add("classe-clavier-signes");
+    clavier.appendChild(clavierSignes);
+        // boutton supression C
 let signeC = document.createElement("div");
-signeC.classList.add("classe-C");
-clavierSignes.appendChild(signeC);
+    signeC.classList.add("boutton2");
+    signeC.innerText= "C";
+    signeC.style.height="60px";
+    signeC.style.widht= "60px";
+    signeC.style.border= "1px solid black";
+    clavierSignes.appendChild(signeC);
+    
+    // je creer des bouttons que j'ajoute au claviersignes
+    // bouton moins -
+let signeMoins= document.createElement('div');
+    // j'atribut une classe
+    signeMoins.classList.add("boutton2");
+    // j'atribut le signe a mon boutton
+    signeMoins.innerText= "-";
+    signeMoins.style.height= "60px";
+    signeMoins.style.width= "60px";
+    signeMoins.style.border= "1px solid black";
+
+        // le moins devien l'enfant de clavierSignes
+    clavierSignes.appendChild(signeMoins);
+
+    // boutton plus +
+let signePlus= document.createElement("div");
+    signePlus.classList.add("boutton2");
+    signePlus.innerText="+";
+    signePlus.style.height="60px";
+    signePlus.style.width="60px";
+    signePlus.style.border = "1px solid black";
+    clavierSignes.appendChild(signePlus);
+
+    // boutton division /
+let signeDivision= document.createElement("div");
+    signeDivision.innerText= "÷";
+    signeDivision.classList.add("boutton2");
+    signeDivision.style.height = "60px";
+    signeDivision.style.width = "60px";
+    signeDivision.style.border= "1px solid black";
+    clavierSignes.appendChild(signeDivision);
+
+    // bouton multiplication
+let signeMulti= document.createElement("div");
+    signeMulti.innerText= "x";
+    signeMulti.classList.add("boutton2");
+    signeMulti.style.height= "60px";
+    signeMulti.style.width= "60px";
+    signeMulti.style.border="1px solid black";
+    clavierSignes.appendChild(signeMulti);
+    // boutton egal =
+let signeEgal = document.createElement("div");
+    signeEgal.classList.add("boutton2");
+    signeEgal.innerText ="=";
+    signeEgal.style.height= "60px";
+    signeEgal.style.widht= "60px";
+    signeEgal.style.border= "1px solid black";
+    clavierSignes.appendChild(signeEgal);
+
 
 
 
