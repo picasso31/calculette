@@ -2,6 +2,64 @@
     box-sizing: border-box;
     margin:0;
     padding: 0;
-    font-size: 20px;
+    font-size: 30px;
     /* border: 1px solid red ; */
+}
+h1{
+    text-align: center;
+}
+main {
+    width: 100%;
+    margin: auto;
+    border: 1px solid rgb(7, 243, 78);
+    /* background-color: gray; */
+}
+.classe-ecran{
+    /* border: solid red; */
+    text-align:end
+   
+}
+body{
+    background-color: yellow;
+}
+.classe-clavier {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.classe-boutton {
+    margin: 2px;
+    border-radius: .5rem;
+}
+.boutton2 {
+    margin: 2px;
+    border-radius: .5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100% ;
+    
+}
+.classe-division {
+    display: flex;
+    align-items: center;
+}
+.clavierSignes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+
+.boutton2{
+    background-color: rgb(107, 233, 233);
+    display: flex;
+    justify-self: ;
+    box-sizing: border-box;
+    margin: 2px;
+}
+
+.classe-clavier {
+    margin-top: 2rem;
 }
