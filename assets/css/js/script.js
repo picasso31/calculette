@@ -143,7 +143,7 @@ let signeEgal = document.createElement("div");
     signeEgal.style.widht= "60px";
     signeEgal.style.border= "1px solid black";
     clavierSignes.appendChild(signeEgal);
-
+// fonction de claculatrice
 
 
 
