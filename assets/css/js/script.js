@@ -13,7 +13,8 @@ let calc = document.createElement("main");
 calc.style.height = "600px";
 calc.style.width = "400px";
 calc.style.border = "3px solid black";
-calc.style.backgroundColor = "white"
+calc.style.backgroundColor = "white";
+let operation = [];
 
 // atribuer un enfant a mon element "document.body.appenchild"(le nom de ma boite creer ma variable)
 
@@ -118,7 +119,7 @@ let signePlus= document.createElement("button");
 
     // boutton division /
 let signeDivision= document.createElement("button");
-    signeDivision.innerText= "÷";
+    signeDivision.innerText= "/";
     signeDivision.classList.add("classe-boutton");
     signeDivision.style.height = "60px";
     signeDivision.style.width = "60px";
@@ -127,7 +128,7 @@ let signeDivision= document.createElement("button");
 
     // bouton multiplication
 let signeMulti= document.createElement("button");
-    signeMulti.innerText= "x";
+    signeMulti.innerText= "*";
     signeMulti.classList.add("classe-boutton");
     signeMulti.style.height= "60px";
     signeMulti.style.width= "60px";
@@ -143,24 +144,45 @@ let signeEgal = document.createElement("button");
     clavierSignes.appendChild(signeEgal);
 // fonction de claculatrice
         // je selectionne un element avec querrySelector/et je selectionne ma classe boutton
-let premierBouton = document.querySelectorAll(".classe-boutton");
+let tousBoutons = document.querySelectorAll(".classe-boutton");
 // j'affiche sur ma console.
-console.log(premierBouton);
+console.log(tousBoutons);
         //je selectionne mon premier boutton 
-        // for each = c'est pour chaque element (unBoutton => {})
+        // for each = c'est pour chaque element (unBoutton => {}) j'ai fait une boucle
         // {exemple.addEventListener("click", function() {
-premierBouton.forEach(unBouton => {
-
+            tousBoutons.forEach(unBouton => {
         // addEventListener= c'est pour ajouter un ecouter d'evenement (surveiller le click , function() )
     unBouton.addEventListener("click", function(){
-
-        
         if (unBouton.innerText !== "C" && unBouton.innerText !== "=") {//Si la propriété innerText du bouton sur lequel j'ai cliqué est différent de "C" et différent de "="
+            if (operation.length ===0 ) {
+                document.querySelector(".classe-ecran").innerText = unBouton.innerText;
+            }else{
+                document.querySelector(".classe-ecran").innerText += unBouton.innerText;
+            }
             console.log("L'utilisateur a appuyé sur la touche : ", unBouton.innerText);// Je fais ça
-            document.querySelector(".classe-ecran").innerText += unBouton.innerText;// et ça
+            // et ça
+            operation.push(unBouton.innerText);
         } else { //Sinon
+
             // Si appuyé sur C ou =
             console.log("Tu as cliqué sur C ou ="); //je fais ça
+            // === pour comparer
+
+            if (unBouton.innerText === "C") {
+                document.querySelector(".classe-ecran").innerText = "0";
+                operation = [];
+            }else {
+                console.log("Vous avez cliqué sur = et voici l'opération à calculer : ", operation);
+                let resultat = operation.join('');
+                console.log(resultat);
+                resultat = eval(resultat);
+                console.log(resultat);
+            console.log(resultat);
+            ecran.innerText = resultat 
+
+              
+            
+            }
         }
         
         // unBouton.style.color = "green";
