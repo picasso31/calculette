@@ -3,7 +3,7 @@
     margin:0;
     padding: 0;
     font-size: 30px;
-    /* border: 1px solid red ; */
+    border: 1px solid red ;
 }
 h1{
     text-align: center;
@@ -26,40 +26,32 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding: 5px;
 }
-.classe-boutton {
-    margin: 2px;
-    border-radius: .5rem;
-}
-.boutton2 {
-    margin: 2px;
-    border-radius: .5rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    width: 100% ;
-    
-}
-.classe-division {
-    display: flex;
-    align-items: center;
-}
-.clavierSignes {
+.classe-clavier-chiffres {
     display: flex;
     flex-wrap: wrap;
-    width: 30%;
+}
+.classe-boutton {
+    margin: 2px auto;
+    border-radius: .5rem;
+}
+.classe-boutton {
+    margin: 2px auto;
+    border-radius: .5rem;
 }
 
-
-.boutton2{
-    background-color: rgb(107, 233, 233);
+.clavier-signes {
     display: flex;
-    justify-self: ;
-    box-sizing: border-box;
-    margin: 2px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 30%;
 }
 
 .classe-clavier {
     margin-top: 2rem;
+}
+h1{
+    display: flex;
+    
 }
