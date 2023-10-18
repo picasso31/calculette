@@ -3,7 +3,7 @@
     margin:0;
     padding: 0;
     font-size: 30px;
-    border: 1px solid red ;
+    /* border: 1px solid red ; */
 }
 h1{
     text-align: center;
@@ -11,7 +11,7 @@ h1{
 main {
     width: 100%;
     margin: auto;
-    border: 1px solid rgb(7, 243, 78);
+    border: 1px solid rgb(2, 105, 33);
     /* background-color: gray; */
 }
 .classe-ecran{
@@ -20,7 +20,7 @@ main {
    
 }
 body{
-    background-color: yellow;
+    background-color: rgb(102, 148, 151);
 }
 .classe-clavier {
     width: 100%;
@@ -49,9 +49,8 @@ body{
 }
 
 .classe-clavier {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 h1{
-    display: flex;
-    
+    text-align: center;
 }

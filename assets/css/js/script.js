@@ -9,7 +9,8 @@ console.log("script chargée !")
 
 
 // j'ai creer ma calculatrice qui s'apelle calc
-let calc = document.createElement("main");      
+let calc = document.createElement("main");   
+  
 calc.style.height = "600px";
 calc.style.width = "400px";
 calc.style.border = "3px solid black";
@@ -59,6 +60,7 @@ for (let index = 1; index <= 10; index++) {
         boutton.style.border = "1px solid blue";
         boutton.style.height = "100px";
         boutton.style.width = "100px";
+
         
             // jr lui est attribuer une classlist
         boutton.classList.add("classe-boutton");
