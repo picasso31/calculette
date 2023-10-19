@@ -10,11 +10,11 @@ console.log("script chargée !")
 
 // j'ai creer ma calculatrice qui s'apelle calc
 let calc = document.createElement("main");   
-  
+console.log("il est ici",calc);
 calc.style.height = "600px";
 calc.style.width = "400px";
-calc.style.border = "3px solid black";
-calc.style.backgroundColor = "white";
+calc.style.border = "6px solid black";
+calc.style.backgroundColor = "black";
 let operation = [];
 
 // atribuer un enfant a mon element "document.body.appenchild"(le nom de ma boite creer ma variable)
@@ -42,6 +42,7 @@ let clavier = document.createElement("div");
 // comme j'ai plusieur div je lui atribuer une classlist.add pour la reconnaitre plus facilement sur ma console
 clavier.classList.add("classe-clavier");
 clavier.style.border = "2px solid black";
+clavier.style.backgroundColor= "black";
 // ensuite j'ai attribuer mon clavier a ma calculette
 calc.appendChild(clavier);
 
@@ -84,7 +85,7 @@ let decimal = document.createElement("button");
 
 // j'ai creer un element clavier signes sur le quel j'affect a clavier 
 let clavierSignes = document.createElement("div");
-    clavierSignes.classList.add("clavier-signes");
+    clavierSignes.classList.add("clavier-signes");    
     clavier.appendChild(clavierSignes);
         // boutton supression C
 let signeC = document.createElement("button");
@@ -168,8 +169,9 @@ console.log(tousBoutons);
 
             // Si appuyé sur C ou =
             console.log("Tu as cliqué sur C ou ="); //je fais ça
+            
             // === pour comparer
-
+            // 
             if (unBouton.innerText === "C") {
                 document.querySelector(".classe-ecran").innerText = "0";
                 operation = [];
@@ -177,7 +179,7 @@ console.log(tousBoutons);
                 console.log("Vous avez cliqué sur = et voici l'opération à calculer : ", operation);
                 let resultat = operation.join('');
                 console.log(resultat);
-                resultat = eval(resultat);
+                resultat = newFunction(resultat);
                 console.log(resultat);
             console.log(resultat);
             ecran.innerText = resultat 
@@ -197,4 +199,9 @@ console.log(tousBoutons);
 
 
 
+
+function newFunction(resultat) {
+    resultat = eval(resultat);
+    return resultat;
+}
 
